@@ -17,9 +17,9 @@ public class Map
     public void drawMap(Room currentLocation)
     {
         String mapString = "";
-        for(Room discoveredRoom : lastRooms)
+        for(Room lastDiscoveredRooms : lastRooms)
         {
-
+            //if(lastDiscoveredRooms.getExit(""))
         }
     }
 
