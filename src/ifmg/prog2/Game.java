@@ -1,3 +1,5 @@
+package ifmg.prog2;
+
 import java.util.concurrent.TimeUnit;
 
 
@@ -9,14 +11,15 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-        
+    private Map map;
     /**
      * Create the game and initialise its internal map.
      */
     public Game() 
     {
-        createRooms();
         parser = new Parser();
+        map = new Map();
+        createRooms();
     }
 
     /**
@@ -24,21 +27,25 @@ public class Game
      */
     private void createRooms()
     {
-        Room casteloVilaEsperanca, butecoDoVladmilson, supermercadosHb, postoLipiranga, Ifmg;
-      
-        // create the rooms
-        casteloVilaEsperanca = new Room("Um castelo feito de tijolo e reboco.");
-        butecoDoVladmilson = new Room("Um buteco onde os demais seres sobrenaturais se reunem.");
-        supermercadosHb = new Room("Um supermercado que tem muito além do que uma picanha sangrando.");
-        postoLipiranga = new Room("Um posto comum, onde o preço da gasolina é mais assustador que qualquer monstro.");
-        Ifmg = new Room("Uma faculdade onde o maior lorde Vampiro leciona, Calex Carlayle III.");
-        // initialise room exits
-        casteloVilaEsperanca.setExits(null, supermercadosHb, butecoDoVladmilson, postoLipiranga,null,null);
-        supermercadosHb.setExits(casteloVilaEsperanca, null, null, null,null,null);
-        postoLipiranga.setExits(null, null, casteloVilaEsperanca, Ifmg,null,null);
-        
+        Room casteloVilaEsperanca, butecoDoVladmilson, supermercadosHb, postoLipiranga, ifmg;
 
-        currentRoom = casteloVilaEsperanca;  // start game outside
+        // create the rooms
+        casteloVilaEsperanca = new Room("Castelo Vila Esperanca","Um castelo feito de tijolo e reboco.");
+        butecoDoVladmilson = new Room("Buteco do Vladmilson","Um buteco onde os demais seres sobrenaturais se reunem.");
+        supermercadosHb = new Room("Supermercados Hb","Um supermercado que tem muito além do que uma picanha sangrando.");
+        postoLipiranga = new Room("Posto Lipiranga","Um posto comum, onde o preço da gasolina é mais assustador que qualquer monstro.");
+        ifmg = new Room("IFMG Sabará", "Uma faculdade onde o maior lorde Vampiro leciona, Claudex Carlayle III.");
+
+        //Create a rooms references: direction and exits names
+        casteloVilaEsperanca.setExit("sul",supermercadosHb);
+        casteloVilaEsperanca.setExit("leste",butecoDoVladmilson);
+        casteloVilaEsperanca.setExit("oeste",postoLipiranga);
+        supermercadosHb.setExit("norte",casteloVilaEsperanca);
+        postoLipiranga.setExit("leste",casteloVilaEsperanca);
+        postoLipiranga.setExit("oeste",ifmg);
+
+        //Set the current player location
+        setCurrentRoom(casteloVilaEsperanca);
     }
 
     /**
@@ -88,6 +95,7 @@ public class Game
         }
 
         String commandWord = command.getCommandWord();
+
         if (commandWord.toLowerCase().equals("acode"))
             printHelp();
         else if (commandWord.toLowerCase().equals("partiu"))
@@ -124,7 +132,7 @@ public class Game
     {
         if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
-            System.out.println("Ir aonde?");
+            System.out.println("Ir onde?");
             return;
         }
 
@@ -158,11 +166,16 @@ public class Game
             return true;  // signal that we want to quit
         }
     }
-    
+
     /**
-    private void printLocationInfo()
+     * Set the current player location(room) and update player map, as the player reaches a new place.
+     * @param newLocationRoom the new location that the player discovered, it will also be the current location in the
+     *                        game
+     */
+    private void setCurrentRoom(Room newLocationRoom)
     {
-        currentRoom.getExitString();
+        currentRoom = newLocationRoom;
+        map.addDiscoveredRoom(newLocationRoom);
     }
-    */
+
 }
