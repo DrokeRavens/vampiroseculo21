@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class Room
 {
     private String description;
-    private HashMap<String, Room> rooms;
+    private HashMap<String, Room> roomExits;
     private String name;
     private Inventory roomInventory;
 
@@ -21,7 +21,7 @@ public class Room
     public Room(String name, String description)
     {
         this.description = description;
-        rooms = new HashMap<String,Room>();
+        roomExits = new HashMap<String,Room>();
         roomInventory = new Inventory();
         this.name = name;
     }
@@ -44,13 +44,13 @@ public class Room
     {
         if(vizinha != null)
         {
-            if(rooms.containsKey(direction))
+            if(roomExits.containsKey(direction))
             {
-                rooms.replace(direction, vizinha);
+                roomExits.replace(direction, vizinha);
             }
             else
             {
-                rooms.put(direction, vizinha);
+                roomExits.put(direction, vizinha);
             }
         }
 
@@ -69,8 +69,8 @@ public class Room
     }
 
     public Room getExit(String description){
-        if(rooms.containsKey(description)){
-            return (Room) rooms.get(description);
+        if(roomExits.containsKey(description)){
+            return (Room) roomExits.get(description);
         }
         return null;
     }
@@ -81,6 +81,6 @@ public class Room
      */
     public String getExitString()
     {
-        return (String) ("Você está em " + getDescription() + "\nSaídas:\n" + rooms.keySet());
+        return (String) ("Você está em " + getDescription() + "\nSaídas:\n" + roomExits.keySet());
     }
 }
