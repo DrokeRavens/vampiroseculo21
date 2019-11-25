@@ -1,5 +1,6 @@
 package ifmg.prog2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -11,6 +12,7 @@ public class Room
     private String description;
     private HashMap<String, Room> rooms;
     private String name;
+    private Inventory roomInventory;
 
     /**
      * @author Bruno Alef, Bruno Giovani, Lazaro Junior, Lucas Laet e Matheus Giovanny.
@@ -20,7 +22,17 @@ public class Room
     {
         this.description = description;
         rooms = new HashMap<String,Room>();
+        roomInventory = new Inventory();
         this.name = name;
+    }
+
+    /**
+     * Adiciona um novo item a relação de itens do inventório da sala.
+     * @param itemToAdd  Item a ser adicionado.
+     */
+    public void addRoomInventoryItem(Item itemToAdd)
+    {
+        roomInventory.addNewItem(itemToAdd);
     }
 
     /**
@@ -62,7 +74,6 @@ public class Room
         }
         return null;
     }
-
     /**
      * Return a description of a room exit,
      * for example, "Exits: north west"

@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e831f8c-9e36-4f71-88ba-4e514feb7325" name="Default Changelist" comment="" />
+    <list default="true" id="047dd91a-d41d-445c-98dd-01b37a544a09" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1TvsTREEA9NIgKrJZcGI532HEuT" />
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Errors" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1U7ny6bNkMI5M4Uhl3jqAchULdm" />
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -24,34 +31,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ifmg.prog2.Main" />
-      <module name="VampiroSeculos21" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e831f8c-9e36-4f71-88ba-4e514feb7325" name="Default Changelist" comment="" />
-      <created>1574351910614</created>
+      <changelist id="047dd91a-d41d-445c-98dd-01b37a544a09" name="Default Changelist" comment="" />
+      <created>1574716752886</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574351910614</updated>
+      <updated>1574716752886</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
