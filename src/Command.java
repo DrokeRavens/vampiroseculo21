@@ -1,4 +1,3 @@
-package ifmg.prog2;
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  
@@ -13,9 +12,9 @@ package ifmg.prog2;
  * known) then the command word is <null>.
  *
  * If the command had only one word, then the second word is <null>.
- * 
- * @author  Michael Kolling and David J. Barnes
- * @version 2008.03.30
+ *
+ * @authors Bruno Alef, Bruno Giovani, Lazaro Junior, Lucas Laet e Matheus Giovanny.
+ * @version 1.0 of 2019.
  */
 
 public class Command
@@ -75,5 +74,6 @@ public class Command
     {
         return (secondWord != null);
     }
+    
 }
 

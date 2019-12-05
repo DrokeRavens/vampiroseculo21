@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="vampiroseculo21:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/vampiroseculo21_jar</output-path>
+    <root id="archive" name="vampiroseculo21.jar">
+      <element id="module-output" name="vampiroseculo21" />
+    </root>
+  </artifact>
+</component>

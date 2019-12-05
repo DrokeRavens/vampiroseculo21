@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Room
+comment0.text=\r\n\ @author\ \ Michael\ Kolling\ and\ David\ J.\ Barnes\r\n\ @version\ 2008.03.30\r\n
+comment1.params=description
+comment1.target=Room(java.lang.String)
+comment1.text=\r\n\ Create\ a\ room\ described\ "description".\ Initially,\ it\ has\r\n\ no\ exits.\ "description"\ is\ something\ like\ "a\ kitchen"\ or\r\n\ "an\ open\ court\ yard".\r\n\ @param\ description\ The\ room's\ description.\r\n
+comment2.params=north\ south\ east\ west\ above\ under
+comment2.target=void\ setExits(Room,\ Room,\ Room,\ Room,\ Room,\ Room)
+comment2.text=\r\n\ Define\ the\ exits\ of\ this\ room.\ \ Every\ direction\ either\ leads\r\n\ to\ another\ room\ or\ is\ null\ (no\ exit\ there).\r\n\ @param\ north\ The\ north\ exit.\r\n\ @param\ east\ The\ east\ east.\r\n\ @param\ south\ The\ south\ exit.\r\n\ @param\ west\ The\ west\ exit.\r\n
+comment3.params=direction\ vizinha
+comment3.target=void\ setExit(java.lang.String,\ Room)
+comment3.text=\r\n\ Define\ uma\ sa\u00EDda\ dessa\ sala.\r\n\ @param\ direction\ \ A\ dire\u00E7\u00E3o\ da\ sa\u00EDda.\r\n\ @param\ vizinha\ \ O\ objeto\ Room\ na\ dire\u00E7\u00E3o\ especificada.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getDescription()
+comment4.text=\r\n\ @return\ The\ description\ of\ the\ room.\r\n
+comment5.params=description
+comment5.target=Room\ getExit(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getExitString()
+comment6.text=\r\n\ Return\ a\ description\ of\ a\ room\ exit,\r\n\ for\ example,\ "Exits\:\ north\ west"\r\n\ @return\ one\ description\ of\ follow\ exits\ avaliable.\r\n
+numComments=7
