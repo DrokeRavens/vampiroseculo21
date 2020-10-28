@@ -1,0 +1,3 @@
+Esse codigo foi criado inspirado  no jogo zuulbad.
+
+todo...
